@@ -8,7 +8,7 @@ export async function GET(request) {
         }
 
         const html = await response.text();
-        arg = arg.split('<div class="title">\n                <a                    href="')[1]
+        arg = html.split('<div class="title">\n                <a                    href="')[1]
         arg = arg.split(`" onclick="setEntryCookie('VidPg-premVid')"   class="">`)[0]
         let url = "https://fr.pornhub.com" + arg
 
