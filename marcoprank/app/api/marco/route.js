@@ -13,8 +13,7 @@ export async function GET(request) {
         let url = "https://fr.pornhub.com" + arg
 
         if (url) {
-            const url = `https://fr.pornhub.com${url}`;
-            return NextResponse.json({ url });
+            return NextResponse.json({url:  `https://fr.pornhub.com${url}` });
         } else {
             return NextResponse.json({ error: 'Video URL not found' }, { status: 404 });
         }
